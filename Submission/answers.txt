@@ -1,0 +1,13 @@
+# Answers for Exercise 1
+
+1) I'd say they are very similar in difficulty to work with but I like the layout
+   of dataframes because they are lovely to look at. Being able to view a dataframe in
+   an excel like table is very visually appealing and doesn't lack in functionality at all.
+
+2) pivot_months_loops: 578 ms ± 36.1 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)
+   pivot_months_pandas: 21.3 ms ± 3.77 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+
+   The main reason I believe that it is so much quicker to use the pandas method is
+   because of the lack of loops. Looping through arrays is quite costly and being able to perform functions
+   on entire arrays instead of going through each element is much more efficient.
+
