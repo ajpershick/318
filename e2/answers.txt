@@ -2,4 +2,4 @@
 
 1) Using the formula y = mx + b, where m is the slope, x is the x-intercept, and b is the y-intercept. We find a line of best fit for the scatter plot of data. This shows the average correlation of date vs ratings.
 
-2) This creates a best fit line because it is plotting dates against a function of the timestamps. This means that the dates (created_at) and timestamps are paired together correctly because they both contain the same index / size.
+2) This creates a best fit line because it is plotting dates against a function of the timestamps. This means that the dates (created_at) and timestamps are paired together correctly because they both contain the same indices / size.

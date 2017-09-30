@@ -1,0 +1,16 @@
+#### Answers for Exercise 3 ####
+
+(1) I think that Kalman returned better results for my output. There was more you could tweak in
+    Kalman filtering that could be shaped rather than just a simple frac value.
+    My Kalman's plot ended up a lot smoother than my LOESS, however it had a minor loss of
+    outlier values for the heat spikes. The Kalman had less of a downside of
+    smoothing out the plot than the LOESS filtering, which was heavily impacted by smoothing.
+    Kalman filtering seems to be better because of assumptions made using Trans and Obs covariances.
+    LOESS is probably more useful when you have loads of data and don't know a lot about where it came from.
+
+(2) It seems to me that timestamps could be quite useful if they were collected independently.
+    They could get rid of some assumptions we make such as "Was Greg consistently walking at 1m/s??".
+    We could more precisely calculate speed and distance using timestamps, making the
+    smoothing process a lot easier.
+
+
