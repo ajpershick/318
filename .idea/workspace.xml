@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33e27aeb-0a3f-4a72-b7d4-d2341191895a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e3/answers.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e3/calc_distance.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/e3/smooth_temperature.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e2/answers.txt" afterPath="$PROJECT_DIR$/e2/answers.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e3/calc_distance.py" afterPath="$PROJECT_DIR$/e3/calc_distance.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e3/cpu.svg" afterPath="$PROJECT_DIR$/e3/cpu.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e3/smooth_temperature.py" afterPath="$PROJECT_DIR$/e3/smooth_temperature.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,19 +20,19 @@
     <SUITE FILE_PATH="coverage/CMPT_318$dog_rates__1_.coverage" NAME="dog-rates (1) Coverage Results" MODIFIED="1506118983899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/e2" />
     <SUITE FILE_PATH="coverage/CMPT_318$create_plots.coverage" NAME="create_plots Coverage Results" MODIFIED="1506375566900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/e2" />
     <SUITE FILE_PATH="coverage/CMPT_318$np_summary.coverage" NAME="np_summary Coverage Results" MODIFIED="1505439163525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Submission" />
-    <SUITE FILE_PATH="coverage/CMPT_318$smooth_temperature.coverage" NAME="smooth_temperature Coverage Results" MODIFIED="1506751241580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/e3" />
+    <SUITE FILE_PATH="coverage/CMPT_318$smooth_temperature.coverage" NAME="smooth_temperature Coverage Results" MODIFIED="1506753552552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/e3" />
     <SUITE FILE_PATH="coverage/CMPT_318$pd_summary_py.coverage" NAME="pd_summary.py Coverage Results" MODIFIED="1505319493985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/CMPT_318$dog_rates.coverage" NAME="dog-rates Coverage Results" MODIFIED="1505959561613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
     <SUITE FILE_PATH="coverage/CMPT_318$monthly_totals__1_.coverage" NAME="monthly_totals (1) Coverage Results" MODIFIED="1505439320950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Submission" />
-    <SUITE FILE_PATH="coverage/CMPT_318$calc_distance.coverage" NAME="calc_distance Coverage Results" MODIFIED="1506750945330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/e3" />
+    <SUITE FILE_PATH="coverage/CMPT_318$calc_distance.coverage" NAME="calc_distance Coverage Results" MODIFIED="1506754624745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/e3" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="calc_distance.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="calc_distance.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/e3/calc_distance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="67" column="6" lean-forward="true" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+            <state relative-caret-position="579">
+              <caret line="65" column="37" lean-forward="false" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -42,21 +40,80 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smooth_temperature.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e3/smooth_temperature.py">
+      <file leaf-file-name="out.gpx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e3/out.gpx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="answers.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calc_distance_hint.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e3/calc_distance_hint.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="walk2.gpx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e3/walk2.gpx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="walk1.gpx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e3/walk1.gpx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smooth_temperature.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e3/smooth_temperature.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="783">
+              <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyGPSFiles-out.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e3/MyGPSFiles-out.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cpu.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/e3/cpu.svg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+              <folding>
+                <marker date="1506753554596" expanded="true" signature="155592:155665" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="answers.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/e3/answers.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="8" column="108" lean-forward="true" selection-start-line="8" selection-start-column="108" selection-end-line="8" selection-end-column="108" />
+              <caret line="8" column="108" lean-forward="false" selection-start-line="8" selection-start-column="108" selection-end-line="8" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -84,9 +141,9 @@
         <option value="$PROJECT_DIR$/Submission/answers.txt" />
         <option value="$PROJECT_DIR$/e2/create_plots.py" />
         <option value="$PROJECT_DIR$/e2/dog-rates.py" />
-        <option value="$PROJECT_DIR$/e3/calc_distance.py" />
-        <option value="$PROJECT_DIR$/e3/smooth_temperature.py" />
         <option value="$PROJECT_DIR$/e3/answers.txt" />
+        <option value="$PROJECT_DIR$/e3/smooth_temperature.py" />
+        <option value="$PROJECT_DIR$/e3/calc_distance.py" />
       </list>
     </option>
   </component>
@@ -166,7 +223,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.smooth_temperature">
+  <component name="RunManager" selected="Python.calc_distance">
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -413,8 +470,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.smooth_temperature" />
-        <item index="1" class="java.lang.String" itemvalue="Python.calc_distance" />
+        <item index="0" class="java.lang.String" itemvalue="Python.calc_distance" />
+        <item index="1" class="java.lang.String" itemvalue="Python.smooth_temperature" />
         <item index="2" class="java.lang.String" itemvalue="Python.create_plots" />
         <item index="3" class="java.lang.String" itemvalue="Python.dog-rates (1)" />
         <item index="4" class="java.lang.String" itemvalue="Python.dog-rates" />
@@ -447,9 +504,9 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23114355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23114355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32927817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33657745" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20114942" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -503,13 +560,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/e2/dog-rates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/e2/create_plots.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -629,36 +679,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e3/walk2.gpx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e3/walk1.gpx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/e2/dog-rates.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e3/MyGPSFiles-out.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e3/cpu.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -690,36 +714,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/e3/calc_distance_hint.py">
+    <entry file="file://$PROJECT_DIR$/e3/answers.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        <state relative-caret-position="216">
+          <caret line="8" column="108" lean-forward="false" selection-start-line="8" selection-start-column="108" selection-end-line="8" selection-end-column="108" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e3/cpu.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <marker date="1506753554596" expanded="true" signature="155592:155665" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e3/walk2.gpx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e3/walk1.gpx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e3/MyGPSFiles-out.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/e3/smooth_temperature.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        <state relative-caret-position="783">
+          <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e3/calc_distance_hint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e3/out.gpx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/e3/calc_distance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="67" column="6" lean-forward="true" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+        <state relative-caret-position="579">
+          <caret line="65" column="37" lean-forward="false" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e3/answers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="108" lean-forward="true" selection-start-line="8" selection-start-column="108" selection-end-line="8" selection-end-column="108" />
-          <folding />
         </state>
       </provider>
     </entry>

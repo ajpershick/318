@@ -31,6 +31,6 @@ kf = KalmanFilter(initial_state_mean=initial_state,
 kalman_smoothed, _ = kf.smooth(kalman_data)
 plt.plot(cpu_data['timestamp'], kalman_smoothed[:, 0], 'g-', label='Kalman')
 plt.legend()
-plt.show() # easier for testing
-#plt.savefig('cpu.svg') # for final submission
+# plt.show() # easier for testing
+plt.savefig('cpu.svg') # for final submission
 

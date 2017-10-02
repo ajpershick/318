@@ -27,7 +27,7 @@ def read_gpx(systemarg):
         lats.append(lat)
         lons.append(lon)
 
-    return pd.DataFrame({'lats':lats, 'lons':lons})
+    return pd.DataFrame({'lat':lats, 'lon':lons})
 
 # Taken from https://stackoverflow.com/questions/40452759/pandas-latitude-longitude-to-distance-between-successive-rows
 def haversine_np(lon1, lat1, lon2, lat2):
@@ -44,8 +44,8 @@ def haversine_np(lon1, lat1, lon2, lat2):
     return km
 
 def distance(points):
-    dist = haversine_np(points['lons'].shift(), points['lats'].shift(),
-                 points.loc[1:, 'lons'], points.loc[1:, 'lats'])
+    dist = haversine_np(points['lon'].shift(), points['lat'].shift(),
+                 points.loc[1:, 'lon'], points.loc[1:, 'lat'])
     dist = np.sum(dist)
     return dist * 1000
 
@@ -53,7 +53,7 @@ def smooth(points):
     kalman_data = points
     initial_state = kalman_data.iloc[0]
     observation_covariance = np.diag([0.25, 0.25]) ** 2  # TODO: shouldn't be zero
-    transition_covariance = np.diag([0.25, 0.25]) ** 2  # TODO: shouldn't be zero
+    transition_covariance = np.diag([0.1, 0.1]) ** 2  # TODO: shouldn't be zero
     transition = np.identity(2)  # TODO: shouldn't (all) be zero
     kf = KalmanFilter(initial_state_mean=initial_state,
                       initial_state_covariance=observation_covariance,
@@ -63,18 +63,40 @@ def smooth(points):
     kalman_smoothed, _ = kf.smooth(kalman_data)
 
     kalmanDF = pd.DataFrame({
-        'lats': kalman_smoothed[:, 0],
-        'lons': kalman_smoothed[:, 1]
+        'lat': kalman_smoothed[:, 0],
+        'lon': kalman_smoothed[:, 1]
     })
-
     return kalmanDF
+
+
+def output_gpx(points, output_filename):
+    """
+    Output a GPX file with latitude and longitude from the points DataFrame.
+    """
+    from xml.dom.minidom import getDOMImplementation
+    def append_trkpt(pt, trkseg, doc):
+        trkpt = doc.createElement('trkpt')
+        trkpt.setAttribute('lat', '%.8f' % (pt['lat']))
+        trkpt.setAttribute('lon', '%.8f' % (pt['lon']))
+        trkseg.appendChild(trkpt)
+
+    doc = getDOMImplementation().createDocument(None, 'gpx', None)
+    trk = doc.createElement('trk')
+    doc.documentElement.appendChild(trk)
+    trkseg = doc.createElement('trkseg')
+    trk.appendChild(trkseg)
+
+    points.apply(append_trkpt, axis=1, trkseg=trkseg, doc=doc)
+
+    with open(output_filename, 'w') as fh:
+        doc.writexml(fh, indent=' ')
 
 def main():
     points = read_gpx(sys.argv[1])
     print('Unfiltered distance: %0.2f' % (distance(points)))
     smoothed_points = smooth(points)
     print('Filtered distance: %0.2f' % (distance(smoothed_points)))
+    output_gpx(smoothed_points, 'out.gpx')
 
 main()
-
 
