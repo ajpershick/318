@@ -40,8 +40,6 @@ def best_tmax(city, stations):
     dist = distance(city, stations)
     return stations.get_value(index=dist.argmin(), col='avg_tmax')
 
-Calgary = city_data.iloc[0]
-calgTmax = best_tmax(Calgary, stations)
 city_data['best_tmax'] = city_data.apply(best_tmax, stations=stations, axis=1)
 city_data['population_density'] = city_data['population']/city_data['area']
 

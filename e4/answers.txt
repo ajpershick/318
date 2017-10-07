@@ -1,0 +1,18 @@
+1)  Based on your results for the last question,
+    do you think daily temperatures are a good way to predict population density?
+    Briefly explain why or why not.
+
+    It seems like there is little to no correlation between Average Max Temperature
+    and Population Density in the plot. Based on this evidence, I believe there is no
+    reason to conclude that an increase or decrease in daily temperatures have any affect on population density
+    based on the lack of a linear relationship. However, we might assume that since the majority of the data
+    is found in the 15-25 degree range that maybe that is the ideal preference for people to reside.
+    This however would probably have to be proven in another study with a better null hypothesis.
+
+2)  The larger data file (stations.json.gz) was kept compressed throughout the analysis.
+    Constantly decompressing the data seems inefficient.
+    Why might this be faster than working with the uncompressed .json data?
+
+    The biggest advantage of compressed JSON is it can be compressed up to +80%.
+    It is much easier and more efficient to decompress and parse at the same time rather than
+    decompressing then reading and parsing because of the size of decompressed JSON objects.
