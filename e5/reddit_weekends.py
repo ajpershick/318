@@ -39,10 +39,11 @@ def main():
 
     # Fix 1: Transforming
     transformed_weekday_normality_p = scipy.stats.normaltest(np.sqrt(weekdays_only['comment_count'])).pvalue
-    transformed_weekend_normality_p = scipy.stats.normaltest(np.log(weekends_only['comment_count'])).pvalue
-    transformed_levene_p = scipy.stats.levene(np.sqrt(weekdays_only['comment_count']), np.log(weekends_only['comment_count'])).pvalue
+    transformed_weekend_normality_p = scipy.stats.normaltest(np.sqrt(weekends_only['comment_count'])).pvalue
+    transformed_levene_p = scipy.stats.levene(np.sqrt(weekdays_only['comment_count']), np.sqrt(weekends_only['comment_count'])).pvalue
 
     # Fix 2: CLT
+
     weekends_only['year_week'] = weekends_only['date'].apply(lambda x: str(x.isocalendar()[0]) + str(x.isocalendar()[1]))
     weekdays_only['year_week'] = weekdays_only['date'].apply(lambda x: str(x.isocalendar()[0]) + str(x.isocalendar()[1]))
     weekdays_grouped = weekdays_only.groupby('year_week').agg({'comment_count': 'mean'})
