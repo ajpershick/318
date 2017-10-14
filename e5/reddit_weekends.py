@@ -36,12 +36,13 @@ def main():
     initial_weekday_normality_p = scipy.stats.normaltest(weekdays_only['comment_count']).pvalue
     initial_weekend_normality_p = scipy.stats.normaltest(weekends_only['comment_count']).pvalue
     initial_levene_p = scipy.stats.levene(weekdays_only['comment_count'], weekends_only['comment_count']).pvalue
-
+    weekends_only_mean = weekends_only.mean()
+    weekdays_only_mean = weekdays_only.mean()
     # Fix 1: Transforming
     transformed_weekday_normality_p = scipy.stats.normaltest(np.sqrt(weekdays_only['comment_count'])).pvalue
     transformed_weekend_normality_p = scipy.stats.normaltest(np.sqrt(weekends_only['comment_count'])).pvalue
     transformed_levene_p = scipy.stats.levene(np.sqrt(weekdays_only['comment_count']), np.sqrt(weekends_only['comment_count'])).pvalue
-
+    transformed_ttest = scipy.stats.ttest_ind(np.sqrt(weekdays_only['comment_count']), np.sqrt(weekends_only['comment_count'])).pvalue
     # Fix 2: CLT
 
     weekends_only['year_week'] = weekends_only['date'].apply(lambda x: str(x.isocalendar()[0]) + str(x.isocalendar()[1]))

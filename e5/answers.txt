@@ -1,0 +1,27 @@
+1)  Which of the four transforms suggested got you the closest to satisfying the assumptions of a T-test?
+
+    I used np.sqrt to get the best results I could get. This gave me:
+    Transformed data normality p-values: 0.0369 0.108
+    Transformed data equal-variance p-value: 0.556
+    This means one passes the 95% confidence level test for normality, and one fails.
+    However they pass the levene test for equal variance, which is better than np.log which fails.
+
+2)  I gave imprecise English translations of what the by-week test, and the Mann-Whitney test were actually testing.
+    Do the same for the original T-test, and for the transformed data T-test.
+    That is, describe what the conclusion would be if you could reject the null hypothesis in those tests.
+
+    The null hypothesis is that the means of the samples are the same.
+    This gets rejected at a 0.05 significance level with a T test p value of 1.3e-58 for the original for example.
+    If we got a value like this for the transformed data, it would also be rejected.
+
+3)  Of the four approaches, which do you think actually does a better job of getting an answer for the original question:
+    “are there a different number of Reddit comments posted on weekdays than on weekends?”
+    Briefly explain why. (It's not clear to me that there is a single correct answer to this question.)
+
+    I would say transforming them was the best approach because we could make sure the normality and equal variance
+    was intact for the T Test to work properly by assumption. Then finding a very small p-value indicates a good result.
+
+4)  When are more Reddit comment posted in /r/canada, on average weekdays or weekends?
+
+    Weekends had a mean of 1269.5, whereas weekdays had 1823.6.
+    Therefore, more Reddit comments are posted on average on weekdays.
