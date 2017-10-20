@@ -1,4 +1,4 @@
-Calculations for data-0:
+Calculations for data-1:
 xmean: 8.71769618641
 ymean: 12.5228740347
 xsd: 12.1555172312
@@ -10,7 +10,7 @@ ymax: 27.3841526115
 corr: 0.950325695438
 description: fairly strong positive correlation/linear relationship
 
-Calculations for data-1:
+Calculations for data-2:
 xmean: -0.710787126716
 ymean: -0.74898697645
 xsd: 11.4815835878
@@ -22,7 +22,7 @@ ymax: 14.1473149923
 corr: 0.955153166575
 description: Slightly stronger positive correlation, the data is a little bit more compact.
 
-Calculations for data-2:
+Calculations for data-3:
 xmean: 0.96890749042
 ymean: 8.50853523664
 xsd: 2.23555786106
@@ -34,7 +34,7 @@ ymax: 10.5518710228
 corr: 0.981937264676
 description: 4 Strongly correlated positive linear groups of data. Most likely taken from separate sample groups and combined (stratified random sampling)
 
-Calculations for data-3:
+Calculations for data-4:
 xmean: 49.9050861483
 ymean: 18.5538365254
 xsd: 28.5086105199
@@ -46,7 +46,7 @@ ymax: 44.56504
 corr: -0.0811930673549
 description: A border around the outside of the space, with an SFU printed in the bottom right corner.
 
-Calculations for data-4:
+Calculations for data-5:
 xmean: 49.9099935784
 ymean: 18.5555249377
 xsd: 28.5000009438
@@ -58,7 +58,7 @@ ymax: 49.9341970363
 corr: -0.0882359898306
 description: 5 groups of vertical lines, with the one the sides more filled in from the center than the ones in the middle.
 
-Calculations for data-5:
+Calculations for data-6:
 xmean: 7.21615517961
 ymean: 7.60221502824
 xsd: 11.9215990675
