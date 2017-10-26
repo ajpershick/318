@@ -1,0 +1,21 @@
+import time
+from implementations import all_implementations
+import numpy as np
+import pandas as pd
+
+def main():
+    random_array = np.random.uniform(size=30000)
+    data = pd.DataFrame()
+    for sort in all_implementations:
+        sort_array = np.zeros(40)
+        for i in range(40):
+            st = time.time()
+            sort(random_array)
+            en = time.time()
+            sort_array[i] = (en-st)
+        data[sort.__name__] = sort_array
+
+    data.to_csv('data.csv', index=False)
+
+if __name__ == '__main__':
+    main()
