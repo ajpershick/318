@@ -60,7 +60,7 @@ def smooth_test(coef):
     sysinfo, X_test, _ = get_data(testing_data_file)
 
     # feel free to tweak these if you think it helps.
-    transition_stddev = 1
+    transition_stddev = 6
     observation_stddev = 0.1
 
     dims = X_test.shape[-1]

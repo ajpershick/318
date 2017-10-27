@@ -1,0 +1,23 @@
+## Answers for E7 ##
+
+1)  Looking at your dog-rates.ipynb, do you think the residual are close-enough to
+    being normal to look at the OLS p-value?
+    Can you reasonably conclude that the ratings are increasing?
+
+    I think by just taking a look at the histogram, the data seems reasonably normal.
+    However, you could run a normal test on it to determine if it is normal enough to assume that.
+    If we do assume that it is normal enough, then looking at the pvalue (4.68648499391e-74)
+    confidently concludes, even at a 99% confidence level, that the slope is not 0
+    and therefore increasing due to the positive slope of the graph.
+
+2)  Do you think that the new “better” prediction is letting the Kalman filter do a
+    better job capturing the true signal in the noise?
+
+    The new prediction is letting the Kalman filter accurately represent the noise/data
+    but still doesn't seem to smooth out the data at all. Tweaking the std deviations
+    moves the filter perfectly onto the data with a difference of >= around 0.5
+    in observation/predictions. Changing these values however only shifts the data and
+    we are not able to smooth the data doing this while keeping the correct representation.
+    I would conclude that the new Kalman filter is not doing a good enough job at representing
+    the true signal because of the amount of noise in the curve.
+

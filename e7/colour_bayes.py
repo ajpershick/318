@@ -75,6 +75,9 @@ def rgbtolab(X):
 
 def main():
     data = pd.read_csv(sys.argv[1])
+
+    # RGB
+
     X = data # array with shape (n, 3). Divide by 255 so components are all 0-1.
     X = X.drop(['Label'], axis=1)
     X = X.drop(['Confidence'], axis=1)
@@ -84,17 +87,16 @@ def main():
     model_rgb = GaussianNB()
     model_rgb = model_rgb.fit(X_train, y_train)
     print('RGB accuracy: ', model_rgb.score(X_test, y_test))
-    # TODO: print model_lab's accuracy_score
-
     plot_predictions(model_rgb)
     plt.savefig('predictions_rgb.png')
+
+    # LAB
 
     model_lab = make_pipeline(FunctionTransformer(rgbtolab), GaussianNB())
     model_lab = model_lab.fit(X_train, y_train)
     print('LAB accuracy: ', model_lab.score(X_test, y_test))
     plot_predictions(model_lab)
     plt.savefig('predictions_lab.png')
-
 
 if __name__ == '__main__':
     main()
