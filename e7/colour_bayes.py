@@ -83,18 +83,15 @@ def main():
     X_train, X_test, y_train, y_test = train_test_split(X, y)
     model_rgb = GaussianNB()
     model_rgb = model_rgb.fit(X_train, y_train)
-    print(model_rgb.score(X_test, y_test))
-    # TODO: build model_rgb to predict y from X.
-    # TODO: print model_rgb's accuracy_score
-
-    # TODO: build model_lab to predict y from X by converting to LAB colour first.
+    print('RGB accuracy: ', model_rgb.score(X_test, y_test))
     # TODO: print model_lab's accuracy_score
 
     plot_predictions(model_rgb)
     plt.savefig('predictions_rgb.png')
 
-    X = np.array(X)
-    model_lab = make_pipeline(FunctionTransformer(rgbtolab(X)), GaussianNB())
+    model_lab = make_pipeline(FunctionTransformer(rgbtolab), GaussianNB())
+    model_lab = model_lab.fit(X_train, y_train)
+    print('LAB accuracy: ', model_lab.score(X_test, y_test))
     plot_predictions(model_lab)
     plt.savefig('predictions_lab.png')
 
