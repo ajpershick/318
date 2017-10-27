@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from skimage.color import rgb2lab
 from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import FunctionTransformer
 import sys
 
 
@@ -67,6 +68,10 @@ def plot_predictions(model, lum=71, resolution=256):
     plt.xlabel('A')
     plt.imshow(pixels)
 
+def rgbtolab(X):
+    X = X.reshape((1, -1, 3))
+    X = rgb2lab(X)
+    return X.reshape((-1, 3))
 
 def main():
     data = pd.read_csv(sys.argv[1])
@@ -77,7 +82,7 @@ def main():
     X = X / 255
     X_train, X_test, y_train, y_test = train_test_split(X, y)
     model_rgb = GaussianNB()
-    model_rgb.fit(X_train, y_train)
+    model_rgb = model_rgb.fit(X_train, y_train)
     print(model_rgb.score(X_test, y_test))
     # TODO: build model_rgb to predict y from X.
     # TODO: print model_rgb's accuracy_score
@@ -87,11 +92,9 @@ def main():
 
     plot_predictions(model_rgb)
     plt.savefig('predictions_rgb.png')
+
     X = np.array(X)
-    X = X.reshape((1,-1,3))
-    lab = rgb2lab(X)
-    model_lab = lab.reshape((-1,3))
-    make_pipeline()
+    model_lab = make_pipeline(FunctionTransformer(rgbtolab(X)), GaussianNB())
     plot_predictions(model_lab)
     plt.savefig('predictions_lab.png')
 
