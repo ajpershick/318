@@ -2,6 +2,14 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from skimage.color import lab2rgb
+from skimage.color import rgb2lab
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import FunctionTransformer
 import sys
 
 
@@ -70,6 +78,10 @@ def plot_predictions(model, lum=71, resolution=256):
     plt.xlabel('A')
     plt.imshow(pixels)
 
+def rgbtolab(X):
+    X = X.reshape((1, -1, 3))
+    X = rgb2lab(X)
+    return X.reshape((-1, 3))
 
 def main():
     data = pd.read_csv(sys.argv[1])
@@ -77,6 +89,25 @@ def main():
     y = data['Label'].values
 
     # TODO: create some models
+
+    # Bayes RGB
+    X_train, X_test, y_train, y_test = train_test_split(X, y)
+    bayes_rgb_model = GaussianNB()
+
+    # Bayes LAB
+    bayes_lab_model = make_pipeline(FunctionTransformer(rgbtolab), GaussianNB())
+
+    # KNeighboursClassifier RGB
+    knn_rgb_model = KNeighborsClassifier(n_neighbors=9)
+
+    # KNeighboursClassifier LAB
+    knn_lab_model = make_pipeline(FunctionTransformer(rgbtolab), KNeighborsClassifier(n_neighbors=9))
+
+    # SVC RGB
+    svc_rgb_model = SVC(kernel='linear', C=10)
+
+    # SVC LAB
+    svc_lab_model = make_pipeline(FunctionTransformer(rgbtolab), SVC(C=10, kernel='linear'))
 
     # train each model and output image of predictions
     models = [bayes_rgb_model, bayes_lab_model, knn_rgb_model, knn_lab_model, svc_rgb_model, svc_lab_model]
