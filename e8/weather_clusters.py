@@ -2,10 +2,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys
-
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import MinMaxScaler
-
 
 def get_pca(X):
     """
@@ -31,10 +29,9 @@ def get_clusters(X):
 
 
 def main():
-    data = pd.read_csv(sys.argv[1])
-
-    X = # TODO
-    y = # TODO
+    labelled = pd.read_csv(sys.argv[1])
+    y = labelled['city']
+    X = labelled.drop(['city'], axis=1)
     
     X2 = get_pca(X)
     clusters = get_clusters(X)

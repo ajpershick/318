@@ -1,0 +1,22 @@
+1)  Which model did the best for the colour-prediction task?
+    Can you give a theory about why?
+
+    Neighbours LAB model have consistently the best results for the colour-prediction.
+
+2)  Have a look at the cities in your test data where the weather model makes the wrong prediction.
+    Do you feel like the model is making reasonable mistakes?
+    Can you think of any weather features that we could potentially add to make better predictions?
+
+     Yes, the mistakes that are made in the model are only off by at most 1 province.
+     This is reasonable because areas close to each other are sometimes hard to distinguish
+     for certain weather attributes.
+
+     We could potentially add features such as sunlight, which would be higher in areas
+     that are closer to the equator. Also, wind could be useful to distinguish places that
+     are closer to the coastline. Yes, the mistakes that are made in the model are only off by at most 1 province.
+     This is reasonable because areas close to each other are sometimes hard to distinguish
+     for certain weather attributes.
+
+     We could potentially add features such as sunlight, which would be higher in areas
+     that are closer to the equator. Also, wind could be useful to distinguish places that
+     are closer
