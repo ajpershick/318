@@ -5,9 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import GaussianNB
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import FunctionTransformer
 from sklearn.preprocessing import StandardScaler
 import sys
 
@@ -41,6 +39,9 @@ def main():
 
     pd.Series(predictions).to_csv(sys.argv[3], index=False)
     #print()
+
+    df = pd.DataFrame({'truth': y_test, 'prediction': svc_model.predict(X_test)})
+    print(df[df['truth'] != df['prediction']])
 
 if __name__ == '__main__':
     main()
