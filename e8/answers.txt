@@ -2,21 +2,21 @@
     Can you give a theory about why?
 
     Neighbours LAB model have consistently the best results for the colour-prediction.
+    I believe this may have something to do with the continuity of
+    the data, and how the process of SVC tries to draw lines to distinguish colours,
+    but probably has a tough time doing that. Neighbours handles this a little bit better.
+    And also, LAB seems to be better than RGB because of it it more similar to human perception.
 
 2)  Have a look at the cities in your test data where the weather model makes the wrong prediction.
     Do you feel like the model is making reasonable mistakes?
     Can you think of any weather features that we could potentially add to make better predictions?
 
-     Yes, the mistakes that are made in the model are only off by at most 1 province.
-     This is reasonable because areas close to each other are sometimes hard to distinguish
-     for certain weather attributes.
+    Yes, the mistakes that are made in the model are only off by at most 1 province.
+    This is reasonable because areas close to each other are sometimes hard to distinguish
+    for certain weather attributes.
 
-     We could potentially add features such as sunlight, which would be higher in areas
-     that are closer to the equator. Also, wind could be useful to distinguish places that
-     are closer to the coastline. Yes, the mistakes that are made in the model are only off by at most 1 province.
-     This is reasonable because areas close to each other are sometimes hard to distinguish
-     for certain weather attributes.
-
-     We could potentially add features such as sunlight, which would be higher in areas
-     that are closer to the equator. Also, wind could be useful to distinguish places that
-     are closer
+    We could potentially add features such as sunlight, which would be higher in areas
+    that are closer to the equator. Also, wind could be useful to distinguish places that
+    are closer to the coastline. Yes, the mistakes that are made in the model are only off by at most 1 province.
+    This is reasonable because areas close to each other are sometimes hard to distinguish
+    for certain weather attributes.
