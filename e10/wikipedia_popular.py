@@ -7,9 +7,9 @@ assert sys.version_info >= (3, 4) # make sure we have Python 3.4+
 assert spark.version >= '2.2' # make sure we have Spark 2.2+
 
 schema = types.StructType([  # commented-out fields won't be read
-    types.StructField('language', types.StringType(), False),
+    types.StructField('lang', types.StringType(), False),
     types.StructField('name', types.StringType(), False),
-    types.StructField('requests', types.LongType(), False),
+    types.StructField('reqs', types.LongType(), False),
     types.StructField('views', types.LongType(), False),
 ])
 
