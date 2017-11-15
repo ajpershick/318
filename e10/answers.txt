@@ -1,0 +1,13 @@
+29.953s
+
+Following times of each section are using the fastest from previous section.
+
+reddit-0: 11.389s
+
+reddit-2 (without schema): 23.339s
+reddit-2 (with schema): 18.192s
+
+reddit-2 (with cache): 15.012s
+
+
+
