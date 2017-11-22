@@ -32,14 +32,15 @@ def main(in_directory, out_directory):
         data['bytes'],
         path_to_hour(data['filename']).alias("hour")
     )
-
     groupby_hour = data.groupBy("hour").agg(functions.max("views").alias('views'))
-    
+
+    groupby_hour = groupby_hour.cache()
+
     groupby_hour = groupby_hour.select(
         groupby_hour['hour'],
         groupby_hour['views']
     )
-        
+
     data = data.join(groupby_hour, ['hour', 'views'])
     data = data.orderBy('hour')
     data = data.select(
@@ -47,8 +48,6 @@ def main(in_directory, out_directory):
         data['name'],
         data['views']
     )
-    #data.show(100)
-
     data.write.csv(out_directory + '-wiki', mode='overwrite')
 
 if __name__=='__main__':

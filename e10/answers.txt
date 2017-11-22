@@ -1,13 +1,17 @@
 1)
-
     (1) reddit-0: 11.389s
     (2) reddit-2 (without schema or caching): 23.339s
     (3) reddit-2 (with schema, no caching): 18.192s
     (4) reddit-2 (with schema and caching): 15.012s
 
 2)  Looks like the majority of time is spent reading the files based off
-    my results above. By simply setting the schema and caching, we drop to almost half
-    the time.
+    my results above. By simply setting the schema and caching,
+    we drop about a third of the total time.
+
+3)  From thoroughly timing/testing the wikipedia_popular program, caching in
+    many different locations, I found that caching right after the max function
+    faired quite well in efficiency compared to the other locations. This makes sense as
+    we wouldn't want to keep taking the max and reading every time.
 
 
 
