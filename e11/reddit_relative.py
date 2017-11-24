@@ -35,10 +35,9 @@ def main():
     out_directory = sys.argv[2]
 
     comments = spark.read.json(in_directory, schema=schema)
+    comments = comments.cache()
 
     data = comments.groupby('subreddit').agg(functions.avg('score'))
-    #groupedby_subreddit = groupedby_subreddit.cache()
-
     data = data[data['avg(score)'] > 0]
 
     comments = comments.join(data, on='subreddit')
@@ -47,7 +46,6 @@ def main():
     max = comments.groupby('subreddit').agg(functions.max('rel_score'))
 
     comments = comments.join(max, on='subreddit')
-
     comments = comments[comments['rel_score'] == comments['max(rel_score)']]
 
     comments = comments.select(
@@ -55,10 +53,7 @@ def main():
         comments['author'],
         comments['rel_score']
     )
-    comments.show()
-
     comments.write.json(out_directory, mode='overwrite')
-
 
 if __name__=='__main__':
     main()

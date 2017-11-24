@@ -1,0 +1,12 @@
+1)  Being the curious student I am, I decided to thoroughly test my program with
+    various caches. My best results came from caching right after the read function.
+    I believe that doing this prevents the program from re-reading the data form the JSON format
+    each time it does a calculation.
+
+2)  Using the hadoop cluster web ui, I determine these results from the runs:
+
+    38 seconds without broadcasting
+    27 seconds with broadcasting
+
+    Cut off around a third of the running time.
+
