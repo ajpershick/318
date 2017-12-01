@@ -36,14 +36,26 @@ def main():
     logs = spark.createDataFrame(create_row_rdd(in_directory))
     logs.cache()
     logs = logs.groupby('host').agg(functions.count('host').alias('count_requests'), functions.sum('num_bytes').alias('sum_request_bytes'))
+    logs = logs.select(
+        logs['count_requests'],
+        logs['sum_request_bytes']
+    )
+
+    logs = logs.groupby().agg(functions.sum('count_requests').alias('x'), functions.sum('sum_request_bytes').alias('y'),
+                           functions.sum(logs['count_requests']**2).alias('x_sq'), functions.sum(logs['sum_request_bytes']**2).alias('y_sq'),
+                           functions.sum(logs['count_requests'] * logs['sum_request_bytes']).alias('xy'), functions.count('count_requests').alias('n'))
+
+    logs = logs.first()
+    x = logs[0]
+    y = logs[1]
+    x_sq = logs[2]
+    y_sq = logs[3]
+    xy = logs[4]
+    n = logs[5]
 
     # TODO: calculate r.
-    x = logs.groupby().sum().first()[0]
-    y = logs.groupby().sum().first()[1]
-    x_squared = logs['first()[0]
-    y = logs.first()[1]
-    n = 1
-    r = ((n*x*y) - (x*y)) / ((n*x^2) - ())
+
+    r = (n*xy - x*y) / ((((n*x_sq) - x**2)**(0.5)) * (n*y_sq - y**2)**(0.5))
 
     print("r = %g\nr^2 = %g" % (r, r**2))
 
