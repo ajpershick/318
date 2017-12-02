@@ -35,12 +35,27 @@ def main():
     in_directory = sys.argv[1]
     out_directory = sys.argv[2]
     data = spark.read.text(in_directory)
-    data.show()
     wordbreak = r'[%s\s]+' % (re.escape(string.punctuation),)  # regex that matches spaces and/or punctuation
-    data = data[functions.split(
-            data['value'],wordbreak)]
-    data.show()
 
+    data = data.select(
+        functions.lower(data['value']).alias('value')
+    )
+
+    data = data.select(
+            functions.split(data['value'],wordbreak).alias('value')
+    )
+
+    data = data.select(
+        functions.explode(data['value']).alias('word')
+    )
+
+    data = data[data['word'] != '']
+
+    count = data.groupBy(data['word']).agg(functions.count(data['word']).alias('count'))
+    count = count.sort(functions.desc('count'))
+    count.show()
+
+    count.write.csv(out_directory)
 
 if __name__=='__main__':
     main()
